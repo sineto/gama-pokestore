@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 export const Container = styled.article`
 	font-weight: 700;
-	margin: 1.5em 3em;
+	margin: 1.5em 1em;
 	border: 3px solid #BABDB6;
 
 	display: flex;
@@ -43,6 +43,12 @@ export const CardDescription = styled.div`
 export const CardName = styled.p`
 	text-transform: capitalize;
 	margin-bottom: 0.85em;
+`;
+
+export const CardPrice = styled.span`
+	font-size: 0.85em;
+	font-weight: 700;
+	color: #1492E6;
 `;
 
 export const CardSubDesc = styled.div`
