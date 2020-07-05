@@ -4,7 +4,8 @@ import { Pokemon } from '../../Utils/Common';
 import {
 	Container, 
 	CardDescription,
-	CardName, 
+	CardName,
+	CardPrice,
 	CardSubDesc,
 	CardSubTitle,
 	CardSubSpan,
@@ -17,6 +18,7 @@ const PokemonCard: React.FC<{pokemon: Pokemon}> = ({ pokemon }) => {
 			<img src={ pokemon.sprites.front_default } alt={ pokemon.name + 'image'} />
 
 			<CardDescription>
+				<CardPrice>{ pokemon.price }</CardPrice>
 				<CardName>{ pokemon.name }</CardName>
 				<CardSubDesc>
 					<CardSubTitle>
