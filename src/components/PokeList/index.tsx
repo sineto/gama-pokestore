@@ -73,7 +73,7 @@ const PokeList = () => {
 
 			<NextButton
 				onClick={handleNextButton}
-				disabled={ apiResource?.count ? offset >= apiResource.count : false }
+				disabled={apiResource?.count ? offset >= apiResource.count : false}
 			>
 				Next <FaChevronRight />
 			</NextButton>

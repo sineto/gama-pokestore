@@ -25,12 +25,18 @@ const Button = styled.button`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	transition: all 0.2s ease-in-out;
 
-	&:hover {
+	&:hover:enabled {
 		color: white;
 		background-color: #1492E6;
+	}
+
+	&:disabled {
+		color: #BABDB6;
+		border-color: #BABDB6;
+		cursor: not-allowed;
 	}
 `;
 
