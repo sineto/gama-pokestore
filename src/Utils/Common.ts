@@ -15,6 +15,7 @@ export type Pokemon = {
 	id: number;
 	name: string;
 	image: string;
+	price: string;
 	sprites: { front_default: string; };
 	base_experience: number;
 	weight: number;
@@ -37,8 +38,19 @@ export const GetPokeData = async (offset: number | undefined, limit: number) => 
 	return response;
 };
 
+export const formatPrice = (value: number) => {
+	const currency = new Intl.NumberFormat('en', {
+		style: 'currency',
+		currency: 'USD'
+	});
+
+	const price = currency.format(value);
+	return price;
+};
+
 export const GetPokemon = async (pokemon: ResponseListItem) => {
 	const response = await axios.get(pokemon.url);
 	const image = `https://pokeres.bastionbot.org/images/pokemon/${response.data.id}.png`;
-	return { ...response.data, image };
+	const price = formatPrice(response.data.height + response.data.weight);
+	return { ...response.data, image, price };
 };
