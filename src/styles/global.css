@@ -1,0 +1,13 @@
+/* dark blue = #27435E - rgb(39,67,94) */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: rgba(39, 67, 94, 1.0);
+}
+
+
