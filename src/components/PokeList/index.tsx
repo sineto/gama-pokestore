@@ -4,7 +4,7 @@ import { ResponseData, GetPokeData, Pokemon, GetPokemon } from '../../Utils/Comm
 import PokemonCard from '../PokemonCard';
 
 import {
-	Container,
+	Content,
 	Pagination,
 	PrevButton,
 	NextButton
@@ -53,31 +53,36 @@ const PokeList = () => {
 
 	return(
 		<>
-		<Container>
 			{
-				pokemonList[0]
-					? pokemonList.map((pokemon: Pokemon) => {
-						return <PokemonCard key={pokemon.id} pokemon={ pokemon } />
-					})
-					: 'Loading...'
+				pokemonList[0] ? (
+				<div>
+					<Content>
+						{
+							pokemonList.map((pokemon: Pokemon) => {
+								return <PokemonCard key={pokemon.id} pokemon={ pokemon } />
+							})
+						}
+					</Content>
+
+					<Pagination>
+						<PrevButton
+							onClick={handlePrevButton}
+							disabled={apiResource?.previous === null}
+						>
+							<FaChevronLeft /> Prev
+						</PrevButton>
+
+						<NextButton
+							onClick={handleNextButton}
+							disabled={apiResource?.count ? offset >= apiResource.count : false}
+						>
+							Next <FaChevronRight />
+						</NextButton>
+					</Pagination>
+				</div>
+
+				) : 'Loading...'
 			}
-
-		</Container>
-		<Pagination>
-			<PrevButton
-				onClick={handlePrevButton}
-				disabled={apiResource?.previous === null}
-			>
-				<FaChevronLeft /> Prev
-			</PrevButton>
-
-			<NextButton
-				onClick={handleNextButton}
-				disabled={apiResource?.count ? offset >= apiResource.count : false}
-			>
-				Next <FaChevronRight />
-			</NextButton>
-		</Pagination>
 		</>
 	);
 };
