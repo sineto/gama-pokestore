@@ -1,11 +1,11 @@
 import React from 'react';
-import PokeList from './components/PokeList';
+
+import Routes from './Routes';
 
 function App() {
   return (
 		<div>
-			<h1>React with Typescript</h1>
-			<PokeList />
+			<Routes />
 		</div>
   );
 }
