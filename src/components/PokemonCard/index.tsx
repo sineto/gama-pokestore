@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
-import { Pokemon } from '../../Utils/Common';
+import { Pokemon, FormatPrice } from '../../Utils';
 import {
-	Container, 
+	Container,
 	CardDescription,
 	CardName,
 	CardPrice,
@@ -12,13 +12,19 @@ import {
 	CardButton
 } from './style';
 
-const PokemonCard: React.FC<{pokemon: Pokemon}> = ({ pokemon }) => {
+const PokemonCard: React.FC<{
+	pokemon: Pokemon,
+	pushToCart: any
+}> = ({ 
+	pokemon, 
+	pushToCart
+}) => {
 	return (
 		<Container>
 			<img src={ pokemon.sprites.front_default } alt={ pokemon.name + 'image'} />
 
 			<CardDescription>
-				<CardPrice>{ pokemon.price }</CardPrice>
+				<CardPrice>{ FormatPrice(pokemon.price) }</CardPrice>
 				<CardName>{ pokemon.name }</CardName>
 				<CardSubDesc>
 					<CardSubTitle>
@@ -35,7 +41,12 @@ const PokemonCard: React.FC<{pokemon: Pokemon}> = ({ pokemon }) => {
 					</CardSubTitle>
 				</CardSubDesc>
 			</CardDescription>
-			<CardButton> <FaCartPlus size={24} style={{ marginRight: 10 }}/> Add to Cart </CardButton>
+			<CardButton onClick={() => pushToCart(pokemon, 1)}>
+				<FaCartPlus
+					size={24}
+					style={{ marginRight: 10 }} />
+				Add to Cart
+			</CardButton>
 		</Container>
 	);
 };

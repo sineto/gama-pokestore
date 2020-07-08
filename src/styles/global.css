@@ -10,4 +10,7 @@ body {
 	color: rgba(39, 67, 94, 1.0);
 }
 
-
+a {
+	color: rgba(39, 67, 94, 1.0);
+	text-decoration: none;
+}
