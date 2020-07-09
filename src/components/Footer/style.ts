@@ -17,7 +17,7 @@ export const FooterContainer = styled.footer`
 		order: 2;
 	}
 
-	@media (max-width: 390px) {
+	@media (max-width: 500px) {
 		flex-wrap: nowrap;
 		flex-direction: column;
 		justify-content: center;
