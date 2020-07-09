@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 export const Container = styled.article`
 	font-weight: 700;
-	margin: 1.5em 1em;
+	margin: 1.5em 0.85em;
 	border: 3px solid #BABDB6;
 
 	display: flex;
