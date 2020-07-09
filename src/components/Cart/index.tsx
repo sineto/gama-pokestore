@@ -31,7 +31,7 @@ import './style.scss';
 
 const useStyles = makeStyles({
   list: {
-    width: 350,
+		width: 350,
   },
   fullList: {
     width: 'auto',
@@ -77,7 +77,7 @@ const Cart: React.FC<{
     >
 			<CartList>
 				{
-					pokemonCart.length !== 0 
+					pokemonCart.length !== 0
 					? pokemonCart.map((item) => {
 							return (
 								<ListItem>
@@ -102,7 +102,10 @@ const Cart: React.FC<{
 					<PriceValue>{FormatPrice(totalPrice)}</PriceValue>
 				</Price>
 				<Buttons>
-					<ButtonCheckout onClick={handleClickOpen}>
+					<ButtonCheckout
+						onClick={handleClickOpen}
+						disabled={pokemonCart.length === 0 ? true : false}
+					>
 						<FaRegCheckCircle
 							size={25}
 							style={{ marginRight: '10px' }}

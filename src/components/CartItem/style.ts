@@ -6,29 +6,50 @@ export const Container = styled.div`
 	font-weight: 600;
 	text-transform: capitalize;
 	color: rgb(39,67,94);
+	background-color: white;
 	padding: 1em;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
-
-	background-color: white;
+`;
+export const Image = styled.img`
+	max-width: 80px;
+	margin: 10px;
 `;
 
 export const Description = styled.div`
-	img, span {
-		display: block;
-	}
-
-	img {
-		max-width: 80px;
-	}
+	width: 100%;
 `;
 
-export const Actions = styled.div`
+export const Name = styled.span`
+	text-align: left;
+	margin: 0 10px 8px 0;
+`;
+
+export const Price = styled.span`
+	text-align: left;
+	color: #1492E6;
+`;
+
+export const Infos = styled.div`
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+`;
+
+export const IncDec = styled.div`
+	margin-top: 0.65em;
+	display: flex;
 	align-items: center;
+
+	span {
+		width: 30px;
+		text-align: center;
+		display: block;
+		margin: 0 1em;
+	}
 `;
 
 export const Button = styled.button`
@@ -39,10 +60,11 @@ export const Button = styled.button`
 	outline: none;
 `;
 
-export const Name = styled.span`
-	margin-right: 10px;
-`;
+export const ButtonTrash = styled(Button)`
+	float: right;
+	color: #BABDB6;
 
-export const Price = styled.span`
-	color: #1492E6;
+	&:hover {
+		color: #EF2929;
+	}
 `;

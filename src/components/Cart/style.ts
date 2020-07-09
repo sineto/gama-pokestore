@@ -55,10 +55,14 @@ export const ButtonCheckout = styled.button`
 	justify-content: center;
 	align-items: center;
 
-	&:hover {
+	&:hover:enabled, &:disabled {
 		color: #1492E6;
 		border-color: #1492E6;
 		background-color: white;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
 	}
 `;
 

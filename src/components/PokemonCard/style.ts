@@ -23,7 +23,7 @@ export const Container = styled.article`
 	}
 
 	&:hover {
-		box-shadow: 6px 10px 10px 10px  rgba(20, 146, 230, 0.1);
+		box-shadow: 6px 10px 15px rgba(20, 146, 230, 0.2);
 		border-color: rgba(20, 146, 230, 1.0);
 	}
 `;

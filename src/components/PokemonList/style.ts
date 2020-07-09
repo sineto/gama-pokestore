@@ -7,6 +7,7 @@ export const Content = styled.div`
 `;
 
 export const Pagination = styled.div`
+	margin: 1em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,7 +20,6 @@ const Button = styled.button`
 	border: 2px solid #1492E6;
 	background: white;
 	padding: 0.65em;
-	maring: 1em;
 	cursor: pointer;
 
 	display: flex;
@@ -41,13 +41,10 @@ const Button = styled.button`
 `;
 
 export const PrevButton = styled(Button)`
-	border-right: 1px solid;
-	&.active {
-		colo: black;
-	}
+	margin-right: 0.15em;
 `;
 
 export const NextButton = styled(Button)`
-	border-left: 1px solid;
+	margin-left: 0.15em;
 `;
 
