@@ -18,9 +18,11 @@ import {
 const CartItem: React.FC<{
 	pokemon: PokemonCartItem,
 	pushToCart: any,
+	deleteFromCart: any
 }> = ({
 	pokemon,
 	pushToCart,
+	deleteFromCart
 }) => {
 
 	return (
@@ -42,7 +44,7 @@ const CartItem: React.FC<{
 						</Button>
 					</IncDec>
 				</Description>
-				<ButtonTrash>
+				<ButtonTrash onClick={() => deleteFromCart(pokemon)}>
 					<FaTrashAlt size={22} />
 				</ButtonTrash>
 			</Container>

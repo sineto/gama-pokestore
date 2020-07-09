@@ -46,11 +46,18 @@ const Store = () => {
 		localStorage.removeItem('pokemonCart');
 	};
 
+	const handleDeleteFromCart = (pokemon: PokemonCartItem) => {
+		const newPokeCart = pokemonCart.filter(item => item.id !== pokemon.id);
+		setPokemonCart(newPokeCart);
+		localStorage.setItem('pokemonCart', JSON.stringify(newPokeCart));
+	};
+
 	return (
 		<>
 			<Header
 				pokemonCart={pokemonCart}
 				pushToCart={handlePushToCart}
+				deleteFromCart={handleDeleteFromCart}
 				cleanCart={handleCleanCart}
 			/>
 			<PokemonList

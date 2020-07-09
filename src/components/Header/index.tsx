@@ -17,10 +17,12 @@ type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 const Header: React.FC<{
 	pokemonCart: PokemonCartItem[],
 	pushToCart: any,
+	deleteFromCart: any,
 	cleanCart: any
 }> = ({
 		pokemonCart,
 		pushToCart,
+		deleteFromCart,
 		cleanCart
 	}) => {
 
@@ -55,6 +57,7 @@ const Header: React.FC<{
 			toggleDrawer={toggleDrawer}
 			pokemonCart={pokemonCart}
 			pushToCart={pushToCart}
+			deleteFromCart={deleteFromCart}
 			cleanCart={cleanCart}
 		/>
 		</>

@@ -43,12 +43,14 @@ const Cart: React.FC<{
 	toggleDrawer: any,
 	pokemonCart: any[],
 	pushToCart: any,
+	deleteFromCart: any,
 	cleanCart: any
 }> = ({
 	open,
 	toggleDrawer,
 	pokemonCart,
 	pushToCart,
+	deleteFromCart,
 	cleanCart
 }) => {
  const [openModal, setOpenModal] = React.useState(false);
@@ -84,6 +86,7 @@ const Cart: React.FC<{
 									<CartItem
 										pokemon={item}
 										pushToCart={pushToCart}
+										deleteFromCart={deleteFromCart}
 									/>
 								</ListItem>
 							)
