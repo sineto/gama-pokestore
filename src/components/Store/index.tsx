@@ -4,18 +4,13 @@ import { Pokemon, PokemonCartItem } from '../../Utils';
 
 import Header from '../Header';
 import PokemonList from '../PokemonList';
+import Footer from '../Footer';
 
 const Store = () => {
 	const getStorage: string | null = localStorage.getItem('pokemonCart') || '';
 	let initialCart: PokemonCartItem[] = getStorage !== '' ? JSON.parse(getStorage) : [];
 
-	// type Counter = {
-	// 	totalprice: number;
-	// 	totalitems: number;
-	// };
-
 	const [ pokemonCart, setPokemonCart ] = useState<PokemonCartItem[]>(initialCart);
-	// const [ counter, setCounter ] = useState<Counter>(null);
 
 	const handlePushToCart = (pokemon: Pokemon, qnt: number) => {
 
@@ -61,6 +56,7 @@ const Store = () => {
 			<PokemonList
 				pushToCart={handlePushToCart}
 			/>
+			<Footer />
 		</>
 	);
 };
