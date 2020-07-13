@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import {
@@ -53,8 +53,7 @@ const Cart: React.FC<{
 	deleteFromCart,
 	cleanCart
 }) => {
- const [openModal, setOpenModal] = React.useState(false);
-
+	const [openModal, setOpenModal] = useState(false);
   const handleClickOpen = () => {
     setOpenModal(true);
 		cleanCart();
