@@ -1,6 +1,6 @@
 # Pokemart
-<p align="center">![Page Preview](/docs/preview-page.png)</p>
-<p align="center">[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://pokemart.now.sh)</p>
+![Page Preview](/docs/preview-page.png)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://pokemart.now.sh)
 
 ## Descrição do Projeto
 [Pokemart](https://pokemart.now.sh) é uma aplicação que simula uma loja virtual de Pokémon. O objetivo do desenvolvimento da loja é o de colocar em prática conhecimentos obtidos ao longo do trinamento [Hiring Coders](https://hiringcoders.gama.academy) promovido pela [Gama Academy](https://gama.academy).
